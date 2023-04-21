@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        body {
+            font-family: 'Reem Kufi', sans-serif;
+            background-image: url('assets/WP1.jpg');
+            background-size: cover;
+            -webkit-animation: slidein 100s;
+            animation: slidein 100s;
+
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+
+        }
+
+        #center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(75, 75, 250, 0.3);
+            border-radius: 3px;
+        }
+
+        #center h1 {
+            text-align: center;
+            color: white;
+            font-family: 'Source Code Pro', monospace;
+            text-transform: uppercase;
+        }
+
+        #btn-alert {
+            width: 165px;
+            height: 100px;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            padding: 7px 10px;
+            background-color: rgb(255, 255, 255);
+            font-size: 1.3em;
+            color: #000000;
+            cursor: pointer;
+            transition: 0.2s;
+            position: fixed;
+            left: 45%;
+            top: 45%;
+        }
+
+        #btn-alert:hover {
+            opacity: 0.8;
+        }
+
+        #btn-alert:focus {
+            outline: rgb(37, 116, 226) solid 3px;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 576px) {
+            #btn-alert {
+                left: 38%;
+            }
+        }
+
+        @-webkit-keyframes slidein {
+            from {
+                background-position: top;
+                background-size: 3000px;
+            }
+
+            to {
+                background-position: -100px 0px;
+                background-size: 2750px;
+            }
+        }
+
+        @keyframes slidein {
+            from {
+                background-position: top;
+                background-size: 3000px;
+            }
+
+            to {
+                background-position: -100px 0px;
+                background-size: 2750px;
+            }
+
+        }
+    </style>
+
+    <title>LEBARAN MUBARAK</title>
+</head>
+
+<body>
+
+    <div id="center">
+        <h1>
+        </h1>
+    </div>
+
+    <button id="btn-alert" onclick="munculinAlert()">CLICK ME!</button>
+
+
+    <script>
+        async function munculinAlert() {
+            /*
+            await Swal.fire({
+                title: 'Hello World.',
+                width: 600,
+                padding: '3em',
+                color: '#716add',
+                background: '#fff  url(assets/WP1.jpg)',
+                backdrop: `
+                rgba(0,0,123,0.4)
+                url("assets/EID1.gif")
+                top
+                 no-repeat
+                `
+            })
+            */
+            await Swal.fire("Hai, Assalamu'alaikum")
+            await Swal.fire('✨Selamat Hari Raya Idul Fitri✨')
+            await Swal.fire({
+                title: 'Minal Aidin Wal Faizin🙏, Mohon Maaf Lahir & Batin🙏',
+                text: 'Semoga kebahagiaan ini membawa kebahagiaan dan ketentraman bagi keluarga dan saudara-saudara Muslim di seluruh dunia. Semoga kita semua terus dijaga dan dilindungi oleh Allah SWT, dan semoga kita semua diberkati dengan kesehatan, kebahagiaan, dan kesuksesan, Aaamin 🙏🙏🙏',
+                imageUrl: 'assets/EID1.gif',
+                imageWidth: 400,
+                imageHeight: 300,
+                imageAlt: 'Gambar Kaligrafi',
+            })
+            await Swal.fire({
+                title: 'Maafin Gak Nih?',
+                text: "Tolong jawab yang jujur ya...",
+                icon: 'question',
+                showDenyButton: true,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Maafin',
+                denyButtonText: `Gak Maafin`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Mission Success',
+                        text: 'Makasih dah dimaafin.',
+                        imageUrl: 'assets/arabicguy.gif',
+                        imageWidth: 400,
+                        imageHeight: 300,
+                        imageAlt: 'Gambar Makasih1',
+                    })
+                } else {
+                    Swal.fire({
+                        title: 'Mission Failed',
+                        text: 'Yah, maaf banget ni kalau ga suka 😢',
+                        imageUrl: 'assets/arabicguy3.gif',
+                        imageWidth: 400,
+                        imageHeight: 350,
+                        imageAlt: 'Gambar GMakasih2',
+                    })
+                }
+            })
+
+        }
+    </script>
+
+</body>
+
+</html>
